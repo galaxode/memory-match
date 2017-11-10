@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { GameboardComponent } from './gameboard/gameboard.component';
 import { TileComponent } from './gameboard/tile/tile.component';
 import { GameboardService } from './gameboard/gameboard.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GameboardComponent,
-    TileComponent
+    TileComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule
