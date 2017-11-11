@@ -10,6 +10,7 @@ import { GameboardService } from '../gameboard/gameboard.service';
   encapsulation: ViewEncapsulation.None
 })
 export class DashboardComponent implements OnInit {
+  placeholder = 'Enter any GitHub username';
 
   constructor(private gameboardService: GameboardService) { }
 
@@ -18,6 +19,7 @@ export class DashboardComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.gameboardService.setTheme(form.value.identiconName);
+    form.reset();
   }
 
 }
