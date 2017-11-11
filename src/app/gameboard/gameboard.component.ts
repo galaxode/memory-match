@@ -16,6 +16,11 @@ export class GameboardComponent implements OnInit {
 
   ngOnInit() {
     this.tiles = this.gameboardService.getTiles();
+    this.gameboardService.reset.subscribe(
+      () => {
+        this.tiles = this.gameboardService.getTiles()
+      }
+    );
   }
 
 }

@@ -42,6 +42,12 @@ export class TileComponent implements OnInit {
         }
       }
     )
+    this.gameboardService.reset.subscribe(
+      () => {
+        this.imagePath = this.themePath;
+        this.disableClick = false;
+      }
+    )
   }
 
   onClick() {

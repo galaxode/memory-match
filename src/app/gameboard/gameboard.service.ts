@@ -30,6 +30,7 @@ export class GameboardService {
   themeChanged = new Subject<string>();
   matchNotFound = new Subject<any>();
   matchFound = new Subject<string>();
+  reset = new Subject<any>();
 
   matchesToWin = this.tileNames.length;
   matches = 0;
@@ -49,6 +50,12 @@ export class GameboardService {
     return this.shuffledTileNames;
   }
 
+  resetGame() {
+    this.matches = 0;
+    this.tilesInPlay = 0;
+    this.reset.next();
+  }
+
   getTheme() {
     return this.identiconFullPath;
   }
@@ -66,7 +73,6 @@ export class GameboardService {
 
   compareTiles(name: string) {
     if (name === this.tile1) {
-      console.log("It's a match!");
       this.matches++;
       this.tilesInPlay = 0;
       this.continueAfterMatch();

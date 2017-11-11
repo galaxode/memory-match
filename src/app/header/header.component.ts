@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { GameboardService } from '../gameboard/gameboard.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,9 +10,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gameboardService: GameboardService) { }
 
   ngOnInit() {
+  }
+
+  resetGame() {
+    this.gameboardService.resetGame();
   }
 
 }
