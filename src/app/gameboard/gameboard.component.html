@@ -1,37 +1,9 @@
-<br><br>
 <div class="row">
-  <div class="col-xs-6">
-    <div class="input-group">
-      <input #newTheme type="text" class="form-control" placeholder="Input a GitHub username">
-      <span class="input-group-btn">
-        <button type="button" (click)="onSubmit(newTheme)" class="btn btn-info">Submit</button>
-      </span>
-    </div>
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" style="width: 500px">
+    <app-tile
+      *ngFor="let tileName of tiles"
+      [name]="tileName"></app-tile>
   </div>
 </div>
-<br><br>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
-<app-tile></app-tile>
+
+

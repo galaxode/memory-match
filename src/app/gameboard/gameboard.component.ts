@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit, ViewEncapsulation } from '@angular/core';
+
 import { GameboardService } from './gameboard.service';
+import { Tile } from './tile.model';
 
 @Component({
   selector: 'app-gameboard',
@@ -8,15 +10,12 @@ import { GameboardService } from './gameboard.service';
   encapsulation: ViewEncapsulation.None
 })
 export class GameboardComponent implements OnInit {
-  @ViewChild('newTheme') newTheme: ElementRef;
+  tiles: Tile[];
 
   constructor(private gameboardService: GameboardService) { }
 
   ngOnInit() {
-  }
-
-  onSubmit() {
-    this.gameboardService.setTheme(this.newTheme.nativeElement.value);
+    this.tiles = this.gameboardService.getTiles();
   }
 
 }

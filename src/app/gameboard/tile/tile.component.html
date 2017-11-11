@@ -1,1 +1,7 @@
-<img style="height: 100px" [src]="identiconPath">
+
+  <img
+    class="img-fluid"
+    [ngStyle]="{ 'max-width': '100px', 'height': 'auto', 'pointer-events': getClickable()}"
+    [src]="imagePath"
+    (click)="onClick()">
+
