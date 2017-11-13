@@ -1,4 +1,5 @@
-img {
-  border: .5px solid gray;
-  margin-bottom: 4px;
+img.tile {
+  margin: 4px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
 }
