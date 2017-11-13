@@ -31,7 +31,9 @@ export class GameboardService {
   matchNotFound = new Subject<any>();
   matchFound = new Subject<string>();
   reset = new Subject<any>();
+  gameWon = new Subject<any>();
 
+  gamesWon = 0;
   matchesToWin = this.tileNames.length;
   matches = 0;
   tilesInPlay = 0;
@@ -56,6 +58,11 @@ export class GameboardService {
     this.reset.next();
   }
 
+  playAgain() {
+    this.matches = 0;
+    this.reset.next();
+  }
+
   getTheme() {
     return this.identiconFullPath;
   }
@@ -75,6 +82,10 @@ export class GameboardService {
     if (name === this.tile1) {
       this.matches++;
       this.tilesInPlay = 0;
+      if (this.matches === this.matchesToWin) {
+        this.gamesWon++;
+        this.gameWon.next();
+      }
       this.continueAfterMatch();
       return true;
     } else {
@@ -94,5 +105,7 @@ export class GameboardService {
   continueAfterMatch() {
     this.matchFound.next(this.tile1);
   }
+
+
 
 }

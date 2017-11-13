@@ -10,7 +10,7 @@ import { Tile } from './tile.model';
   encapsulation: ViewEncapsulation.None
 })
 export class GameboardComponent implements OnInit {
-  tiles: Tile[];
+  tiles: string[];
 
   constructor(private gameboardService: GameboardService) { }
 
