@@ -96,10 +96,8 @@ export class GameboardService {
   }
 
   resetUnmatchedTiles() {
-    setTimeout(() => {
-      this.tilesInPlay = 0;
-      this.matchNotFound.next({tile1: this.tile1, tile2: this.tile2});
-    },1000)
+    this.tilesInPlay = 0;
+    this.matchNotFound.next({tile1: this.tile1, tile2: this.tile2});
   }
 
   continueAfterMatch() {

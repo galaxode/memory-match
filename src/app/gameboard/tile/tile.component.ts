@@ -29,10 +29,15 @@ export class TileComponent implements OnInit {
     );
     this.gameboardService.matchNotFound.subscribe(
       (tiles: {tile1: string, tile2: string}) => {
-        if (this.name === tiles.tile1 || this.name === tiles.tile2) {
-          this.imagePath = this.themePath;
-        }
-        this.disableClick = false;
+        this.disableClick = true;
+        setTimeout(
+          () => {
+            if (this.name === tiles.tile1 || this.name === tiles.tile2) {
+              this.imagePath = this.themePath;
+            }
+            this.disableClick = false;
+          }, 500
+        );
       }
     )
     this.gameboardService.matchFound.subscribe(
