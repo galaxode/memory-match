@@ -1,5 +1,18 @@
 img.tile {
   margin: 4px;
+  width: 100px;
   margin-bottom: 8px;
   box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+@media only screen and (max-width: 405px) {
+  img.tile {
+    width: 71px;
+  }
+}
+
+@media only screen and (min-width: 406px) and (max-width: 488px) {
+  img.tile {
+    width: 83px;
+  }
 }

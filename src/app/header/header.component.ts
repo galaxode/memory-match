@@ -9,14 +9,24 @@ import { GameboardService } from '../gameboard/gameboard.service';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
-
+  displayPlayAgain = false;
   constructor(private gameboardService: GameboardService) { }
 
   ngOnInit() {
+    this.gameboardService.gameWon.subscribe(
+      () => {
+        this.displayPlayAgain = true;
+      }
+    );
   }
 
   resetGame() {
     this.gameboardService.resetGame();
+  }
+
+  onPlayAgain() {
+    this.displayPlayAgain = false;
+    this.gameboardService.playAgain();
   }
 
 }

@@ -11,26 +11,14 @@ import { GameboardService } from '../gameboard/gameboard.service';
 })
 export class DashboardComponent implements OnInit {
   placeholder = 'Enter any GitHub username';
-  displayPlayAgain = false;
 
   constructor(private gameboardService: GameboardService) { }
 
   ngOnInit() {
-    this.gameboardService.gameWon.subscribe(
-      () => {
-        this.displayPlayAgain = true;
-      }
-    );
   }
 
   onSubmit(form: NgForm) {
     this.gameboardService.setTheme(form.value.identiconName);
     form.reset();
   }
-
-  onPlayAgain() {
-    this.displayPlayAgain = false;
-    this.gameboardService.playAgain();
-  }
-
 }

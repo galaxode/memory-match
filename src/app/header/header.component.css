@@ -1,0 +1,35 @@
+button.play-again {
+
+  margin-top: 8px;
+  margin-left: 8px;
+/*  margin-left: 100px;
+  margin-right: 100px;*/
+  /*padding: 12px;*/
+  /*margin-top: 10px;*/
+  width: 90px;
+}
+
+button.play-again:not(:disabled) {
+    animation: enable 1.0s 10;
+}
+
+@keyframes enable {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.2);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
