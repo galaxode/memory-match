@@ -17,9 +17,9 @@
     </form>
     <div class="row">
       <div class="col-xs-6">
-      <h4>Matches: {{ gameboardService.matches }}</h4>
-      <h4>Matches to Win: {{ gameboardService.matchesToWin }}</h4>
-      <h4>Games Won: {{ gameboardService.gamesWon }}</h4>
+      <h4>Matches: {{ getMatches() }}</h4>
+      <h4>Matches to Win: {{ getMatchesToWin() }}</h4>
+      <h4>Games Won: {{ getGamesWon() }}</h4>
     </div>
   </div>
 </div>
