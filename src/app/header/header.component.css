@@ -1,8 +1,12 @@
 a.identicon {
   color: #A879E0;
   font-weight: bold;
-  font-size: 1.1em;
+  font-style: italic;
   text-decoration: none;
+}
+
+a.identicon:hover {
+  color: #C6A2F2;
 }
 
 button.play-again {
