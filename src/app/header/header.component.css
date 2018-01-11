@@ -1,3 +1,10 @@
+a.identicon {
+  color: #A879E0;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
 button.play-again {
   font-size: 1.2em;
   margin-top: 7px;
