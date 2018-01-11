@@ -10,7 +10,7 @@ import { GameboardService } from '../gameboard/gameboard.service';
   encapsulation: ViewEncapsulation.None
 })
 export class DashboardComponent implements OnInit {
-  placeholder = 'Enter any GitHub username';
+  placeholder = 'Enter a GitHub username to change identicons';
 
 
   constructor(private gameboardService: GameboardService) { }
